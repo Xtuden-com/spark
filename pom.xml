@@ -121,10 +121,10 @@
     <slf4j.version>1.7.30</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
     <hadoop.version>3.2.0</hadoop.version>
-    <protobuf.version>2.5.0</protobuf.version>
+    <protobuf.version>3.4.0</protobuf.version>
     <yarn.version>${hadoop.version}</yarn.version>
     <zookeeper.version>3.4.14</zookeeper.version>
-    <curator.version>2.13.0</curator.version>
+    <curator.version>4.2.0</curator.version>
     <hive.group>org.apache.hive</hive.group>
     <hive.classifier>core</hive.classifier>
     <!-- Version used in Maven Hive dependency -->
@@ -172,7 +172,7 @@
     <fasterxml.jackson.version>2.10.0</fasterxml.jackson.version>
     <snappy.version>1.1.8</snappy.version>
     <netlib.java.version>1.1.2</netlib.java.version>
-    <commons-codec.version>1.10</commons-codec.version>
+    <commons-codec.version>1.13</commons-codec.version>
     <commons-compress.version>1.20</commons-compress.version>
     <commons-io.version>2.5</commons-io.version>
     <!-- org.apache.commons/commons-lang/-->
@@ -211,8 +211,8 @@
 
     <!-- Some UI tests require Chrome and Chrome driver installed so those tests are disabled by default. -->
     <test.default.exclude.tags>org.apache.spark.tags.ChromeUITest</test.default.exclude.tags>
-    <test.exclude.tags></test.exclude.tags>
-    <test.include.tags></test.include.tags>
+    <test.exclude.tags/>
+    <test.include.tags/>
 
     <!-- Package to use when relocating shaded classes. -->
     <spark.shade.packageName>org.sparkproject</spark.shade.packageName>
@@ -258,7 +258,7 @@
       things breaking.
     -->
     <spark.test.home>${session.executionRootDirectory}</spark.test.home>
-    <spark.test.webdriver.chrome.driver></spark.test.webdriver.chrome.driver>
+    <spark.test.webdriver.chrome.driver/>
 
     <CodeCacheSize>1g</CodeCacheSize>
     <!-- Needed for consistent times -->
@@ -1242,7 +1242,7 @@
       <dependency>
         <groupId>org.apache.avro</groupId>
         <artifactId>avro-mapred</artifactId>
-        <version>${avro.version}</version>
+        <version>1.11.0</version>
         <classifier>${avro.mapred.classifier}</classifier>
         <scope>${hive.deps.scope}</scope>
         <exclusions>
@@ -2843,7 +2843,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore></ignore>
+                    <ignore/>
                   </action>
                 </pluginExecution>
                 <pluginExecution>
@@ -2856,7 +2856,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore></ignore>
+                    <ignore/>
                   </action>
                 </pluginExecution>
                 <pluginExecution>
@@ -2869,7 +2869,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore></ignore>
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
@@ -3052,7 +3052,7 @@
             </goals>
             <configuration>
               <target>
-                <mkdir dir="${project.build.directory}/tmp" />
+                <mkdir dir="${project.build.directory}/tmp"/>
               </target>
             </configuration>
           </execution>
@@ -3179,7 +3179,7 @@
       <id>hadoop-2.7</id>
       <properties>
         <hadoop.version>2.7.4</hadoop.version>
-        <curator.version>2.7.1</curator.version>
+        <curator.version>4.2.0</curator.version>
         <commons-io.version>2.4</commons-io.version>
         <hadoop-client-api.artifact>hadoop-client</hadoop-client-api.artifact>
         <hadoop-client-runtime.artifact>hadoop-client</hadoop-client-runtime.artifact>
